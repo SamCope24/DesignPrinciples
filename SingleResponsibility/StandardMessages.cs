@@ -9,6 +9,7 @@ namespace SingleResponsibility
 
         public static void EndApplication()
         {
+            Console.WriteLine("Press enter to close...");
             Console.ReadLine();
         }
 
