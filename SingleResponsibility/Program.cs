@@ -5,19 +5,11 @@
         public static void Main()
         {
             StandardMessages.WelcomeMessage();
-
             Person user = PersonDataCapture.Capture();
+            bool isUserValid = PersonValidator.Validate(user);
 
-            if (string.IsNullOrWhiteSpace(user.FirstName))
+            if (!isUserValid)
             {
-                System.Console.WriteLine("You did not give us a valid first name!");
-                StandardMessages.EndApplication();
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(user.LastName))
-            {
-                System.Console.WriteLine("You did not give us a valid last name!");
                 StandardMessages.EndApplication();
                 return;
             }

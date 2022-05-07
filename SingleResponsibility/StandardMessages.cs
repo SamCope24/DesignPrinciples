@@ -11,5 +11,10 @@ namespace SingleResponsibility
         {
             Console.ReadLine();
         }
+
+        public static void DisplayValidationError(string fieldName)
+        {
+            Console.WriteLine($"You did not give us a valid { fieldName }!");
+        }
     }
 }
