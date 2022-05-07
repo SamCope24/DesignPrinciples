@@ -4,7 +4,7 @@
     {
         public static void Main()
         {
-            System.Console.WriteLine("Welcome to my Application");
+            StandardMessages.WelcomeMessage();
 
             Person user = new Person();
 
@@ -17,19 +17,19 @@
             if (string.IsNullOrWhiteSpace(user.FirstName))
             {
                 System.Console.WriteLine("You did not give us a valid first name!");
-                System.Console.ReadLine();
+                StandardMessages.EndApplication();
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(user.LastName))
             {
                 System.Console.WriteLine("You did not give us a valid last name!");
-                System.Console.ReadLine();
+                StandardMessages.EndApplication();
                 return;
             }
 
             System.Console.WriteLine($"Your username is { user.FirstName.Substring(0,1) }{ user.LastName }");
-            System.Console.ReadLine();
+            StandardMessages.EndApplication();
         }
     }
 }
