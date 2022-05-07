@@ -14,7 +14,7 @@
                 return;
             }
 
-            System.Console.WriteLine($"Your username is { user.FirstName.Substring(0,1) }{ user.LastName }");
+            AccountGenerator.CreateAccount(user);
             StandardMessages.EndApplication();
         }
     }

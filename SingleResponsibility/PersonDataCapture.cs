@@ -6,13 +6,13 @@ namespace SingleResponsibility
         {
             Person output = new Person();
 
-            System.Console.Write("What is your first name?");
-            output.FirstName = System.Console.ReadLine();
+            Console.Write("What is your first name?");
+            output.FirstName = Console.ReadLine();
 
-            System.Console.Write("What is your last name?");
-            output.LastName = System.Console.ReadLine();
+            Console.Write("What is your last name?");
+            output.LastName = Console.ReadLine();
 
-            return Person;
+            return output;
         }
     }
 }
