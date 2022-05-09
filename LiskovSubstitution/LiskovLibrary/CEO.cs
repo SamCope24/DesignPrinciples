@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LiskovLibrary
+﻿namespace LiskovLibrary
 {
-    public class CEO : Employee
+    public class CEO : BaseEmployee, IManager
     {
         public override void CalculatePerHourRate(int rank)
         {
             decimal baseAmount = 150M;
 
             Salary = baseAmount * rank;
-        }
-
-        public override void AssignManager(Employee manager)
-        {
-            throw new InvalidOperationException("The CEO has no manager.");
         }
 
         public void GeneratePerformanceReview()

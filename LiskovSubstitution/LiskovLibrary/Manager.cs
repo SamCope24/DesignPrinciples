@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LiskovLibrary
+﻿namespace LiskovLibrary
 {
-    public class Manager : Employee
+    public class Manager : Employee, IManager
     {
         public override void CalculatePerHourRate(int rank)
         {
