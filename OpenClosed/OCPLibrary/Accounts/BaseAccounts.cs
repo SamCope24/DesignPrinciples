@@ -1,6 +1,8 @@
-﻿namespace OCPLibrary
+﻿using OCPLibrary.Applicants;
+
+namespace OCPLibrary.Accounts
 {
-    public class Accounts : IAccounts
+    public class BaseAccounts : IAccounts
     {
         public EmployeeModel Create(IApplicantModel person)
         {
