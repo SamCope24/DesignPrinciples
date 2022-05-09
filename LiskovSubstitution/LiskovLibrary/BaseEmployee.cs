@@ -1,6 +1,6 @@
 namespace LiskovLibrary
 {
-    public class BaseEmployee : IEmployee
+    public abstract class BaseEmployee : IEmployee
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
