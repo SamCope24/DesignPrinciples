@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DemoLibrary
+﻿namespace DemoLibrary
 {
-    public class Chore
+    public class Chore : IChore
     {
         public string ChoreName { get; set; }
         public IPerson Owner { get; set; }
@@ -17,7 +11,7 @@ namespace DemoLibrary
         {
             HoursWorked += hours;
             Logger log = new Logger();
-            log.Log($"Performed work on { ChoreName }");
+            log.Log($"Performed work on {ChoreName}");
         }
 
         public void CompleteChore()
@@ -25,10 +19,10 @@ namespace DemoLibrary
             IsComplete = true;
 
             Logger log = new Logger();
-            log.Log($"Completed { ChoreName }");
+            log.Log($"Completed {ChoreName}");
 
             Emailer emailer = new Emailer();
-            emailer.SendEmail(Owner, $"The chore { ChoreName } is complete.");
+            emailer.SendMessage(Owner, $"The chore {ChoreName} is complete.");
         }
     }
 }
