@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary
 {
-    public class DVD : ILibraryItem
+    public class DVD : IBorrowableDVD
     {
         public string LibraryId { get; set; }
         public string Title { get; set; }
